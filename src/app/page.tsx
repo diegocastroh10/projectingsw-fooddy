@@ -1,10 +1,11 @@
+import '@fooddy/app/globals.css'
+import Sidebar from "@fooddy/components/Sidebar";
 
 export default function Page() {
   return (
-    <div className="w-full flex-auto">
-      <h1>Hello, Home page!</h1>
-      
-    </div>
+    <>
+      <Sidebar />
+    </>
   );
 };
 
