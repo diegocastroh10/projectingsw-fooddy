@@ -1,5 +1,9 @@
+import LayoutSidebar from "@fooddy/components/LayoutSidebar";
+
 export default function ItemsPage() {
     return (
-        <div>Page items</div>
+        <LayoutSidebar>
+            <div>Items Page</div>
+        </LayoutSidebar>
     );
 };

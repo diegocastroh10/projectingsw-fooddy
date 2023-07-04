@@ -1,10 +1,9 @@
-import Sidebar from "@fooddy/components/Sidebar";
+import LayoutSidebar from "@fooddy/components/LayoutSidebar";
 
 export default function SettingsPage() {
     return (
-        <div>
-            Settings Page
-            <Sidebar />    
-        </div>
+        <LayoutSidebar>
+            <div>Settings Page</div>
+        </LayoutSidebar>
     );
 };

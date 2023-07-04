@@ -1,0 +1,15 @@
+import { ReactNode } from "react";
+import Sidebar from "./Sidebar";
+
+interface Props {
+    children: ReactNode | ReactNode[];
+}
+
+export default function LayoutSidebar({ children }:Props ) {
+    return (
+        <div className="layout">
+            <Sidebar />
+            {children}
+        </div>
+    );
+};

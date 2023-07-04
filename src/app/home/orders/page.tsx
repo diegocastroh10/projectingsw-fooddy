@@ -1,5 +1,9 @@
+import LayoutSidebar from "@fooddy/components/LayoutSidebar";
+
 export default function OrdersPage() {
     return (
-        <div>Page orders</div>
+        <LayoutSidebar>
+            <div>Orders Page</div>
+        </LayoutSidebar>
     );
 };
