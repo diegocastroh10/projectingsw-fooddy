@@ -4,11 +4,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import '@fooddy/app/globals.css'
 
-import { BsShop } from 'react-icons/bs';
+import { BsShop, BsSignIntersection } from 'react-icons/bs';
 import { MdOutlineFoodBank,MdOutlineProductionQuantityLimits } from 'react-icons/md';
 import { LuSettings } from 'react-icons/lu';
-import { CgLogOut } from 'react-icons/cg';
-import { BiArrowFromRight } from 'react-icons/bi';
+import { BiArrowFromRight, BiLogInCircle } from 'react-icons/bi';
 import { useContext } from 'react';
 import { SidebarContext } from './SidebarContext';
 
@@ -34,9 +33,14 @@ const sidebarItems = [
         icon: LuSettings,
     },
     {
-        name: "Salir",
-        href: '/',
-        icon: CgLogOut,
+        name: "Register",
+        href: '/home/register',
+        icon: BsSignIntersection,
+    },
+    {
+        name: "Login",
+        href: '/home/login',
+        icon: BiLogInCircle,
     }
 ];
 
