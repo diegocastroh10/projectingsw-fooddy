@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { createProvider } from '@fooddy/app/api/requests/providers.requests';
 import React, { useState } from 'react';
 
@@ -42,53 +42,70 @@ const CreateProviderForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Nombre:
+    <form onSubmit={handleSubmit} className='space-y-6'>
+      <div className="flex flex-col gap-1">
+        <label htmlFor='name'>Nombre</label>
+          <input
+            type="text"
+            name="name"
+            placeholder='Ej: Diego García Candia'
+            className="h-11 px-4 border rounded-md"
+            value={formData.name}
+            onChange={handleInputChange}
+          />
+      </div>
+      <div className="flex flex-col gap-1">
+        <label htmlFor='tin'>RUT</label>
+          <input
+            type="text"
+            name="tin"
+            placeholder='Ej: 12345678-9 (Reemplace K por un 0)'
+            className="h-11 px-4 border rounded-md"
+            value={formData.tin}
+            onChange={handleInputChange}
+          />
+      </div>
+      <div className="flex flex-col gap-1">
+        <label htmlFor='email'>Correo</label>
+          <input
+            type="email"
+            name="email"
+            placeholder='Ej: fooddy@gmail.com'
+            className="h-11 px-4 border rounded-md"
+            value={formData.email}
+            onChange={handleInputChange}
+          />
+      </div>
+      <div className="flex flex-col gap-1">
+      <label htmlFor='phone'>Teléfono</label>
         <input
-          type="text"
-          name="name"
-          value={formData.name}
-          onChange={handleInputChange}
-        />
-      </label>
-      <label>
-        TIN:
-        <input
-          type="text"
-          name="tin"
-          value={formData.tin}
-          onChange={handleInputChange}
-        />
-      </label>
-      <label>
-        Email:
-        <input
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleInputChange}
-        />
-      </label>
-      <label>
-        Teléfono:
-        <input
-          type="text"
+          type="tel"
           name="phone"
+          placeholder='Ej: 912345678'
+          className="h-11 px-4 border rounded-md"
           value={formData.phone}
           onChange={handleInputChange}
         />
-      </label>
-      <label>
-        Contraseña:
-        <input
-          type="password"
-          name="password"
-          value={formData.password}
-          onChange={handleInputChange}
-        />
-      </label>
-      <button type="submit">Crear proveedor</button>
+      </div>
+      <div className="flex flex-col gap-1">
+        <label htmlFor='password'>Contraseña</label>
+          <input
+            type="password"
+            name="password"
+            placeholder='Ej: Fooddy#123'
+            className="h-11 px-4 border rounded-md"
+            value={formData.password}
+            onChange={handleInputChange}
+          />
+      </div>
+      <div className="flex justify-end">
+        <button 
+          className="h-11 px-6 bg-black text-white rounded-md"
+          type='submit'
+        >
+          Registrar
+        </button>
+      </div>
     </form>
   );
 };

@@ -1,64 +1,19 @@
-'use client';
-import React from 'react';
-import { Formik, Field, Form, FormikHelpers } from 'formik';
-import { Authenticate } from '@fooddy/app/api/requests/items.requests';
-import { useRouter } from 'next/navigation';
 import LayoutSidebar from '@fooddy/components/LayoutSidebar';
+import LoginForm from '@fooddy/components/LoginForm';
 
-interface Values {
-  email: string;
-  password: string;
-}
+const NewProducts = () => {
 
-export default function Login() {
-  const router = useRouter();
   return (
     <LayoutSidebar>
-        <main className="flex min-h-screen items-center justify-between p-24">
-        <div>
-            <h1>Iniciar sesión</h1>
-            <Formik
-            initialValues={{
-                email: '',
-                password: ''
-            }}
-            onSubmit={async (values: Values, { setSubmitting }: FormikHelpers<Values>) => {
-                setTimeout(async () => {
-                let response = await Authenticate(values);
-                console.log("RESPONSE IS", response);
-                if (response.status == 200){
-                    console.log(response.data.token);
-                    localStorage.setItem('@Token', response.data.token); // Guardar el token en el almacenamiento local
-                    setSubmitting(false);
-                    router.push('/');
-                } // Redireccionar a la nueva página (ajusta la ruta según tus necesidades)
-                }, 500);
-            }}
-            >
-            <Form>
-                <div>
-                <label htmlFor="email">Email</label>
-                <Field
-                id="email"
-                name="email"
-                placeholder="john@acme.com"
-                type="email"
-                />
-                </div>
-                <label htmlFor="password">Password</label>
-                <Field 
-                id="password"
-                name="password"
-                placeholder="*************"
-                type="password"
-                />
-
-                <button type="submit">Submit</button>
-            </Form>
-            </Formik>
-        </div>
-        </main>
+      <div className="w-full flex justify-center items-center min-h-screen p-6 bg-gray-100">
+          <div className="max-w-2xl w-full border p-6 ">
+              <h1 className="text-xl font-semibold text-center">Iniciar sesión</h1>
+              <LoginForm />
+          </div>
+      </div>
     </LayoutSidebar>
-  )
-}
+  );
+};
 
+
+export default NewProducts;
