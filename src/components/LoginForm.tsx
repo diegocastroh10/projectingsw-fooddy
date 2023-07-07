@@ -32,7 +32,7 @@ export default function Login() {
         >
         <Form className='space-y-6'>
             <div className="flex flex-col gap-1">
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email">Correo</label>
                 <Field
                     id="email"
                     name="email"
@@ -42,7 +42,7 @@ export default function Login() {
                 />
             </div>
             <div className="flex flex-col gap-1">
-                <label htmlFor="password">Password</label>
+                <label htmlFor="password">Contraseña</label>
                 <Field 
                     id="password"
                     name="password"

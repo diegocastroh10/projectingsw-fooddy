@@ -14,7 +14,7 @@ import { SidebarContext } from './SidebarContext';
 const sidebarItems = [
     {
         name: "Tienda",
-        href: '/',
+        href: '/home/provider',
         icon: BsShop,
     },
     {
