@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import '@fooddy/app/globals.css'
+import '@fooddy/app/globals.css';
 
 import { BsShop, BsSignIntersection } from 'react-icons/bs';
 import { MdOutlineFoodBank,MdOutlineProductionQuantityLimits } from 'react-icons/md';
@@ -55,8 +55,8 @@ export default function Sidebar() {
                 <div className='sidebar__top'>
                     <Image 
                         src="/culinariored.png" 
-                        width={60} 
-                        height={60} 
+                        width={80} 
+                        height={80} 
                         className='sidebar__logo'
                         alt='logo'
                     />

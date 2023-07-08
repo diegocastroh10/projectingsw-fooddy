@@ -24,7 +24,7 @@ body {
     display: flex;
     height: 100vh;
     position: relative;
-    gap: 2rem;
+    gap: 0.1rem;
 
 }
 
@@ -80,12 +80,12 @@ body {
 }
 
 .sidebar__icon {
-    font-size: 2rem;
+    font-size: 1rem;
     display: inline-block;
 }
 
 .sidebar__name {
-    margin-left: 1.5rem;
+    margin-left: 1rem;
 }
 
 [data-collapsed="true"] {
