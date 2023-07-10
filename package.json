@@ -29,7 +29,8 @@
     "react-icons": "^4.10.1",
     "tailwindcss": "3.3.2",
     "typescript": "5.1.6",
-    "usehooks-ts": "^2.9.1"
+    "usehooks-ts": "^2.9.1",
+    "yup": "^1.2.0"
   },
   "devDependencies": {
     "prima": "^0.0.1"

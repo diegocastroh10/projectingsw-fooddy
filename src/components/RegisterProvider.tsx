@@ -59,7 +59,7 @@ const CreateProviderForm = () => {
           <input
             type="text"
             name="tin"
-            placeholder='Ej: 12345678-9 (Reemplace K por un 0)'
+            placeholder='Ej: 12345678 (Sin dígito verificador)'
             className="h-11 px-4 border rounded-md"
             value={formData.tin}
             onChange={handleInputChange}
@@ -77,11 +77,10 @@ const CreateProviderForm = () => {
           />
       </div>
       <div className="flex flex-col gap-1">
-      <label htmlFor='phone'>Teléfono</label>
+      <label htmlFor='phone'>Teléfono (8 dígitos)</label>
         <input
           type="tel"
           name="phone"
-          placeholder='Ej: 912345678'
           className="h-11 px-4 border rounded-md"
           value={formData.phone}
           onChange={handleInputChange}

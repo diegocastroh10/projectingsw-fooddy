@@ -11,7 +11,7 @@ const linkAuthenticateProvider = "items/getData";
 const urlAuthenticateProvider = `${Server}/${linkAuthenticateProvider}`;
 
 function ItemsPage() {
-    const router = useRouter()
+  const router = useRouter()
   const [items, setItems] = useState<Item[]>([]);
   const token = localStorage.getItem('@Token'); // Obtener el token del localStorage
 

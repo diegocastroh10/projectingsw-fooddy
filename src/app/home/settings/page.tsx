@@ -1,9 +1,15 @@
 import LayoutSidebar from "@fooddy/components/LayoutSidebar";
+import StoreDetails from '@fooddy/components/SettingProfile';
 
-export default function SettingsPage() {
+const MyPage: React.FC = () => {
     return (
         <LayoutSidebar>
-            <div>Settings Page</div>
+            <div>
+            <h1>Mi Tienda</h1>
+            <StoreDetails />
+            </div>
         </LayoutSidebar>
     );
-};
+  };
+  
+  export default MyPage;
