@@ -1,0 +1,36 @@
+http:
+    port: 3000
+    
+db:
+    host: 'localhost'
+    port: 5432
+    username: 'fooddy_user'
+    password: 'fooddy_pwd'
+    database: 'fooddy_db'
+    
+doc:
+    path: '/docs'
+    password: 'backend_01'
+    title: 'FOODDY API'
+    description: 'Project Ing Software Documentation'
+    version: '1.0'
+    bearer:
+        type: 'http'
+        scheme: 'bearer'
+        format: 'JWT'
+        name: 'JWT'
+        description: 'Enter Jason Web Token'
+        in: 'header'
+        reference: 'JWT-auth'
+
+jwt:
+    key: 'backend_01_jwtkey'
+    alg: 'HS256'
+    exp: '2h'
+
+files:
+    images:
+        providers: 'C:\Users\diego\OneDrive\Escritorio\Curso\5.Next\projectingsw-fooddy\api\uploads\'
+        items: 'C:\Users\diego\OneDrive\Escritorio\Curso\5.Next\projectingsw-fooddy\api\uploads\'
+        requests: 'C:\Users\diego\OneDrive\Escritorio\Curso\5.Next\projectingsw-fooddy\api\uploads\'
+        clients: 'C:\Users\diego\OneDrive\Escritorio\Curso\5.Next\projectingsw-fooddy\api\uploads\'

@@ -1,4 +1,4 @@
-const Server = "https://api.fooddy.cl";
+const Server = "http://localhost:3000";
 
 //REQUEST AUTHENTICATE PROVIDER
 const linkAuthenticateProvider = "providers/authenticate";
