@@ -1,12 +1,17 @@
 'use client';
 import { createProvider } from '@fooddy/app/api/requests/providers.requests';
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { Authenticate } from '@fooddy/app/api/requests/items.requests';
+
 
 const CreateProviderForm = () => {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     name: '',
     tin: '',
     email: '',
+    address: '',
     phone: 0,
     password: '',
   });
@@ -33,6 +38,7 @@ const CreateProviderForm = () => {
         name: '',
         tin: '',
         email: '',
+        address: '',
         phone: 0,
         password: '',
       });
@@ -77,6 +83,17 @@ const CreateProviderForm = () => {
           />
       </div>
       <div className="flex flex-col gap-1">
+        <label htmlFor='address'>Dirección</label>
+          <input
+            type="text"
+            name="address"
+            placeholder='Ej: Independencia 2210'
+            className="h-11 px-4 border rounded-md"
+            value={formData.address}
+            onChange={handleInputChange}
+          />
+      </div>
+      <div className="flex flex-col gap-1">
       <label htmlFor='phone'>Teléfono (8 dígitos)</label>
         <input
           type="tel"
@@ -99,6 +116,7 @@ const CreateProviderForm = () => {
       </div>
       <div className="flex justify-end">
         <button 
+          onClick={() => router.push('/home/')}
           className="h-11 px-6 bg-black text-white rounded-md"
           type='submit'
         >

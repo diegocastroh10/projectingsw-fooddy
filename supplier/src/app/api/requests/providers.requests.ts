@@ -11,6 +11,7 @@ type CreateProvider = {
     name: string;
     tin: string;
     email: string;
+    address: string;
     phone: number;
     password: string;
 }
